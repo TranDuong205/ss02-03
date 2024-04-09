@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let accounts=[
+            {
+                name: "minh",
+                password: "123456",
+                address: "ha noi"
+            },
+            {
+                name: "minh",
+                password: "234456",
+                address: "hcm"
+            },
+            {
+                name: "tom",
+                password: "456789",
+                address: "nghe an"
+            }
+        ]
+        //kiểm tra xem có đối tượng nào ở ninh bình hay ko
+        let result = accounts.some((item,index,arr)=>{
+            return item.address="nghe an"
+        })
+        if(result){
+            console.log("co nguoi o nghe an");
+        }else{
+            console/log("ko co nguoi o nghe an");
+        }
+    </script>
+</body>
+</html>

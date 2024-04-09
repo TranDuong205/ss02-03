@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+// Khởi tạo mảng employees với 3 đối tượng nhân viên
+    const employees = [
+    new Employee("Nguyễn Văn A", 21),
+    new Employee("Nguyễn Văn B", 30),
+    new Employee("Nguyễn Văn C", 19)
+                ];
+
+// Hàm sắp xếp danh sách nhân viên
+    function sortEmployees(employees, sortOrder) {
+        if (sortOrder === "Increase") {
+        employees.sort((a, b) => a.age - b.age);
+        } else if (sortOrder === "Decrease") {
+            employees.sort((a, b) => b.age - a.age);
+        } else {
+            console.log("Invalid sortOrder");
+            return;
+        }
+
+    for (let employee of employees) {
+    console.log(`Name: ${employee.name}, Age: ${employee.age}`);
+    }
+}
+
+// Gọi hàm sortEmployees() để sắp xếp và hiển thị danh sách nhân viên theo tuổi
+sortEmployees(employees, "Decrease");
+console.log("----------------------");
+sortEmployees(employees, "Increase");
+    </script>
+</body>
+</html>

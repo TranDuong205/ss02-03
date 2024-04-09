@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            reduce: tính toán
+            thường thì for thường: code dài hơn
+        */
+       let numbers=[1,2,3,4];
+       //tính tổng tất cả các phần tử trong mảng numbers
+       //dùng for thường tính tổng tất cả các phần tử trong mảng numbers
+       let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        /*
+        accumulator : biến tích lũy
+
+        */
+        console.log("Tổng của các số là:", sum);
+        let total=numbers.reduce((accumulator,currentValue,arr)=>{
+            // lần 1: acc 1 + 2
+            // làn 2: acc 3 + 3
+            // lần 3: acc 6 + 4
+            console.log("2222")
+            return accumulator+currentValue
+        },0)
+        //let a = numbers.reduce(()=>{}.0)
+
+        let carts=[
+            {
+                name: "iphone5",
+                quantity: 5,
+                price: 2000,
+            },
+            {
+                name: "iphone12",
+                quantity: 6,
+                price: 5000,
+            },
+            {
+                name: "iphone16",
+                quantity: 10,
+                price: 12000,
+            }
+        ]
+        let total3 = carts.reduce((acc,item,arr)=>{
+            console.log("3333")
+            return acc + item.quantity*item.price
+        },0)
+        console.log("totall",total3)
+    </script>
+</body>
+</html>

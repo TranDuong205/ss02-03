@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers =[5,11,3,5,1,6]
+        let students=["minh","an","hung"]
+        let result = numbers.sort();
+        console.log("ket qua cua sort",result);
+        let increase = numbers.sort((a,b)=>{
+            return a-b
+        })
+        console.log("increase",increase)
+        let sortByName = students.sort();
+        console.log("sortByName",sortByName)
+        let std=[
+            {
+                name: "hoa",
+                id: 13,
+            },
+            {
+                name: "binh",
+                id: 12,
+            },
+            {
+                name: "nam",
+                id: 111,
+            },
+            {
+                name: "nun",
+                id: 11,
+            }
+            ]
+            let sortStd = std.sort((a,b)=>{
+                if(a.name>b.name){
+                    return 1
+                }else if(a.name<b.name){
+                    return -1
+                }else{
+                    return 0
+                }
+            })
+            console.log("sortStd", sortStd);
+    </script>
+</body>
+</html>

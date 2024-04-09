@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hasUppercase(str) {
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === str[i].toUpperCase() && isNaN(str[i])) {
+                return true;
+                }
+            }
+            return false;
+            }
+            console.log(hasUppercase("Hello World")); // Output: true
+            console.log(hasUppercase("hello world")); // Output: false
+            console.log(hasUppercase("HeLLo WoRlD")); // Output: true
+            console.log(hasUppercase("12345")); // Output: false
+    </script>
+</body>
+</html>

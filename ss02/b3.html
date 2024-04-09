@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function allPositiveNumbers(arr) {
+            for (let num of arr) {
+                if (num <= 0) {
+                return false;
+                }
+            }
+            return true;
+        }
+
+        var numbers1 = [1, 2, 3, 4];
+        console.log(allPositiveNumbers(numbers1));  // Kết quả: true
+
+        var numbers2 = [1, -2, 3, 4];
+        console.log(allPositiveNumbers(numbers2));  // Kết quả: false
+    </script>
+</body>
+</html>
